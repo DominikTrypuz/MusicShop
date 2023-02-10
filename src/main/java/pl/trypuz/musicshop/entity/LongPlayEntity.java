@@ -12,19 +12,21 @@ public class LongPlayEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String albumName;
+    private String bandName;
 
-    public LongPlayEntity(String albumName) {
+    public LongPlayEntity(String albumName, String bandName) {
         this.albumName = albumName;
+        this.bandName = bandName;
     }
 
     public LongPlayEntity() {
     }
 
-    public Long getId() {
-        return id;
+    public String getAlbumName() {
+        return albumName;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getBandName() {
+        return bandName;
     }
 }
