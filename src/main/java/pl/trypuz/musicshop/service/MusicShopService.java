@@ -1,15 +1,16 @@
 package pl.trypuz.musicshop.service;
 
-import pl.trypuz.musicshop.entity.LongPlayEntity;
+import pl.trypuz.musicshop.dto.AlbumDto;
+import pl.trypuz.musicshop.entity.AlbumEntity;
 
-import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 public interface MusicShopService {
 
-    LongPlayEntity saveLongPlay(String albumName, String bandName);
+    AlbumEntity saveLongPlay(AlbumDto dto);
 
-    List<LongPlayEntity> getAllLongPlays();
+    List<AlbumEntity> getAllLongPlays();
 
-    List<LongPlayEntity> findByBandName(String bandName);
+    AlbumEntity findByAlbumName(String albumName);
 }
