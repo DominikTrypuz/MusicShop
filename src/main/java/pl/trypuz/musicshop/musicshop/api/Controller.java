@@ -43,9 +43,4 @@ public class Controller {
         return ResponseEntity.ok(Collections.singletonList(albumMapper.toDTO(entity)));
     }
 
-    @DeleteMapping("/{name}")
-    public ResponseEntity<Void> deleteByAlbum(@PathVariable String name) {
-        service.deleteByAlbum(name);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
-    }
 }
