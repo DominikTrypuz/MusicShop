@@ -1,4 +1,4 @@
-package pl.trypuz.musicshop.musicshop.model.DTOs;
+package pl.trypuz.musicshop.musicshop.model;
 
 public class AlbumDTO {
 
@@ -47,4 +47,5 @@ public class AlbumDTO {
     public String getProducerName() {
         return producerName;
     }
+
 }

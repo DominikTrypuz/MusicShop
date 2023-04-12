@@ -2,10 +2,10 @@ package pl.trypuz.musicshop.musicshop.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pl.trypuz.musicshop.musicshop.model.DTOs.AlbumDTO;
+import pl.trypuz.musicshop.musicshop.model.AlbumDTO;
 import pl.trypuz.musicshop.musicshop.model.entity.AlbumEntity;
 import pl.trypuz.musicshop.musicshop.model.repository.AlbumRepository;
-import pl.trypuz.musicshop.musicshop.service.mapper.AlbumMapper;
+import pl.trypuz.musicshop.musicshop.mapper.AlbumMapper;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class ServiceImp implements pl.trypuz.musicshop.musicshop.service.Service
     }
 
     @Override
-    public AlbumEntity saveAlbum(AlbumDTO dto) {
+    public AlbumEntity save(AlbumDTO dto) {
         AlbumEntity album = albumMapper.toAlbumEntity(dto);
         return albumRepository.save(album);
     }

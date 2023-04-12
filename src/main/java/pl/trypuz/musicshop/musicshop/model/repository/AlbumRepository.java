@@ -9,8 +9,8 @@ import java.util.Optional;
 @Repository
 public interface AlbumRepository extends JpaRepository<AlbumEntity, Long> {
 
-    Optional<AlbumEntity> findByAlbumName(String name);
+    Optional<AlbumEntity> findByAlbumName(String albumName);
 
-    void deleteByAlbumName(String name);
+    void deleteByAlbumName(String albumName);
 
 }

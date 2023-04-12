@@ -10,24 +10,24 @@ public class AlbumEntity {
 
     @ManyToOne
     @JoinColumn(name = "artistName_id")
-    private ArtistNameEntity artistName;
+    private ArtistEntity artistName;
 
     private String albumName;
     private String imageUrl;
     @Column(length = 1000000000)
     private String descriptions;
-    private String genreMusic;
+    private String genreOfMusic;
     private String dateOfProduction;
     private String producerName;
 
-    public AlbumEntity(ArtistNameEntity artistName, String albumName, String imageUrl, String descriptions,
-                       String genreMusic, String dateOfProduction, String producerName)
+    public AlbumEntity(ArtistEntity artistName, String albumName, String imageUrl, String descriptions,
+                       String genreOfMusic, String dateOfProduction, String producerName)
     {
         this.artistName = artistName;
         this.albumName = albumName;
         this.imageUrl = imageUrl;
         this.descriptions = descriptions;
-        this.genreMusic = genreMusic;
+        this.genreOfMusic = genreOfMusic;
         this.dateOfProduction = dateOfProduction;
         this.producerName = producerName;
     }
@@ -35,7 +35,7 @@ public class AlbumEntity {
     public AlbumEntity() {
     }
 
-    public ArtistNameEntity getArtistName() {
+    public ArtistEntity getArtistName() {
         return artistName;
     }
 
@@ -51,8 +51,8 @@ public class AlbumEntity {
         return descriptions;
     }
 
-    public String getGenreMusic() {
-        return genreMusic;
+    public String getGenreOfMusic() {
+        return genreOfMusic;
     }
 
     public String getDateOfProduction() {
@@ -61,5 +61,33 @@ public class AlbumEntity {
 
     public String getProducerName() {
         return producerName;
+    }
+
+    public void setArtistName(ArtistEntity artistName) {
+        this.artistName = artistName;
+    }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setDescriptions(String descriptions) {
+        this.descriptions = descriptions;
+    }
+
+    public void setGenreOfMusic(String genreOfMusic) {
+        this.genreOfMusic = genreOfMusic;
+    }
+
+    public void setDateOfProduction(String dateOfProduction) {
+        this.dateOfProduction = dateOfProduction;
+    }
+
+    public void setProducerName(String producerName) {
+        this.producerName = producerName;
     }
 }
